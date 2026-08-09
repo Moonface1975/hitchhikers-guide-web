@@ -1,0 +1,28 @@
+{
+  "name": "hitchhikers-guide-web",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "predev": "npm run world",
+    "dev": "next dev",
+    "prebuild": "npm run world",
+    "build": "next build",
+    "start": "next start",
+    "world": "node scripts/extract-world.mjs"
+  },
+  "dependencies": {
+    "next": "^15.4.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "typescript": "^5.8.3"
+  },
+  "type": "module"
+}

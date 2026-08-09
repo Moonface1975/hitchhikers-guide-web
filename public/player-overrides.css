@@ -1,0 +1,98 @@
+:root,
+:root[data-theme="dark"] {
+  --glkote-buffer-bg: #05070c;
+  --glkote-buffer-fg: #e7d9c0;
+  --glkote-buffer-reverse-bg: #f2a13a;
+  --glkote-buffer-reverse-fg: #05070c;
+  --glkote-grid-bg: #0a0d14;
+  --glkote-grid-fg: #f2a13a;
+  --glkote-grid-reverse-bg: #2a1f0f;
+  --glkote-grid-reverse-fg: #ffd58a;
+  --glkote-input-fg: #ffb454;
+  --glkote-page-bg: #05070c;
+  --glkote-prop-family: Georgia, "Times New Roman", serif;
+  --glkote-mono-family: "Geist Mono", "Cascadia Mono", Consolas, monospace;
+  --glkote-buffer-size: 17px;
+  --glkote-grid-size: 13px;
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: #05070c !important;
+}
+
+#gameport {
+  max-width: none !important;
+}
+
+.WindowFrame {
+  border-radius: 0;
+}
+
+.BufferWindowInner {
+  padding: clamp(18px, 4vw, 42px) clamp(20px, 5vw, 72px) 48px;
+}
+
+.BufferLine {
+  letter-spacing: 0.005em;
+}
+
+.BufferLine .Style_header,
+.GridWindow {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: "Geist Mono", "Cascadia Mono", Consolas, monospace;
+}
+
+.BufferLine .Style_input,
+.BufferLine textarea.Input {
+  color: #ffb454;
+}
+
+.BufferLine textarea.Input {
+  position: fixed !important;
+  left: -10000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  opacity: 0.001 !important;
+  caret-color: transparent;
+}
+
+html[data-reduce-motion="true"] *,
+html[data-reduce-motion="true"] *::before,
+html[data-reduce-motion="true"] *::after {
+  scroll-behavior: auto !important;
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
+
+.BufferWindow::-webkit-scrollbar-thumb {
+  background: rgba(242, 161, 58, 0.24);
+  border-radius: 999px;
+}
+
+html[data-reading-mode="mono"] {
+  --glkote-prop-family: "Geist Mono", "Cascadia Mono", Consolas, monospace;
+}
+
+html[data-contrast="high"] {
+  --glkote-buffer-bg: #000;
+  --glkote-buffer-fg: #fff;
+  --glkote-grid-bg: #000;
+  --glkote-grid-fg: #fff;
+  --glkote-input-fg: #ffe16a;
+  --glkote-page-bg: #000;
+}
+
+@media (max-width: 760px) {
+  .BufferWindowInner {
+    padding: 18px 18px 86px;
+  }
+
+  :root {
+    --glkote-buffer-size: 16px;
+  }
+}
